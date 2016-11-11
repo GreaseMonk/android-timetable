@@ -1,3 +1,3 @@
-[submodule "libs/timetable"]
-	path = libs/timetable
+[submodule "libs/timetable-core"]
+	path = libs/timetable-core
 	url = git@github.com:GreaseMonk/android-timetable-core.git
