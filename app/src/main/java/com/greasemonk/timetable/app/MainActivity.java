@@ -1,4 +1,4 @@
-package com.greasemonk.timetable;
+package com.greasemonk.timetable.app;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

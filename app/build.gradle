@@ -1,26 +1,57 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.2"
+    compileSdkVersion 25
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
-        applicationId "com.greasemonk.timetable"
+        applicationId "com.greasemonk.timetable.app"
         minSdkVersion 16
-        targetSdkVersion 24
-        versionCode 1
-        versionName "1.0"
+        targetSdkVersion 25
+        versionCode 100
+        versionName "1.0.0"
+
+        applicationVariants.all { variant ->
+            variant.outputs.each { output ->
+                def file = output.outputFile
+                def fileName = file.name.replace(".apk", "-v" + versionName + "-c" + versionCode + ".apk")
+                output.outputFile = new File(file.parentFile, fileName)
+            }
+        }
     }
     buildTypes {
-        release {
+        debug {
+            versionNameSuffix "-DEBUG"
+            try {
+                signingConfig signingConfigs.debug
+            } catch (ex) {
+            }
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        release {
+            try {
+                signingConfig signingConfigs.release
+            } catch (ex) {
+            }
+            zipAlignEnabled true
+            minifyEnabled false
+        }
+    }
+    lintOptions {
+        abortOnError false
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.2.0'
+    compile project(':android-timetable-core')
+    compile "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}" 
+    compile "com.android.support:recyclerview-v7:${rootProject.ext.supportLibVersion}" 
+    compile "com.android.support:support-annotations:${rootProject.ext.supportLibVersion}"
+    
+    // Used to display items in a recyclerview
+    // https://github.com/mikepenz/FastAdapter
+    compile('com.mikepenz:fastadapter:2.0.0@aar') { transitive = true }
+    // Used to display images
+    // https://github.com/bumptech/glide
+    compile 'com.github.bumptech.glide:glide:3.7.0'
 }
