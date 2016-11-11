@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':timetable-core', ':android-timetable-core'
 include ':libs'
