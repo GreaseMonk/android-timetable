@@ -2,6 +2,7 @@ package com.greasemonk.timetable.app;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import com.greasemonk.timetable.AbstractRowItem;
 import com.greasemonk.timetable.TimeTable;
 
 import java.util.ArrayList;
@@ -19,7 +20,8 @@ public class MainActivity extends AppCompatActivity
 		setContentView(R.layout.activity_main);
 		
 		timeTable = (TimeTable) findViewById(R.id.time_table);
-		
+		timeTable.setColumnCount(7);
+		timeTable.update(generateSamplePlanData());
 	}
 	
 	private static List<EmployeePlanItem> generateSamplePlanData()

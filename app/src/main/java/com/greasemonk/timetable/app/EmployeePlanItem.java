@@ -43,9 +43,9 @@ public class EmployeePlanItem implements AbstractRowItem
 		calendar.add(Calendar.DATE, rand.nextInt(30));
 		Date planEnd = calendar.getTime();
 		
-		return new EmployeePlanItem(firstNameSamples[rand.nextInt(firstNameSamples.length + 1)] +
-				lastNameSamples[rand.nextInt(lastNameSamples.length + 1)],
-				projectNames[rand.nextInt(projectNames.length + 1)],
+		return new EmployeePlanItem(firstNameSamples[rand.nextInt(firstNameSamples.length)] + " " +
+				lastNameSamples[rand.nextInt(lastNameSamples.length)],
+				projectNames[rand.nextInt(projectNames.length)],
 				planStart,
 				planEnd);
 	}
