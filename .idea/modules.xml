@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/android-timetable.iml" filepath="$PROJECT_DIR$/.idea/modules/android-timetable.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/android-timetable-core/android-timetable-core.iml" filepath="$PROJECT_DIR$/.idea/modules/android-timetable-core/android-timetable-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spannablebar/spannablebar.iml" filepath="$PROJECT_DIR$/.idea/modules/spannablebar/spannablebar.iml" />
     </modules>
   </component>
 </project>

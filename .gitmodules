@@ -1,3 +1,6 @@
 [submodule "android-timetable-core"]
 	path = android-timetable-core
 	url = git@github.com:GreaseMonk/android-timetable-core.git
+[submodule "spannablebar"]
+	path = spannablebar
+	url = git@github.com:GreaseMonk/SpannableBar.git

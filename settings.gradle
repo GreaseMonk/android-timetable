@@ -1,1 +1,1 @@
-include ':app', ':android-timetable-core'
+include ':app', ':android-timetable-core', ':spannablebar'
