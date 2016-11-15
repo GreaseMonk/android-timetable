@@ -1,4 +1,4 @@
-android-timetable-core
+android-timetable
 ===================
 
 Example app for android-timetable designed for business plan boards.
