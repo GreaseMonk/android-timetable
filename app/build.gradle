@@ -2,14 +2,14 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '25.0.0'
+    buildToolsVersion '25.0.1'
 
     defaultConfig {
         applicationId "com.greasemonk.timetable.app"
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 100
-        versionName "1.0.0"
+        versionCode 101
+        versionName "1.0.1"
 
         applicationVariants.all { variant ->
             variant.outputs.each { output ->
