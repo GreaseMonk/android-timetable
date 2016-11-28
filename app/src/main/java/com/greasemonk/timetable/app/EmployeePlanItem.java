@@ -37,17 +37,18 @@ public class EmployeePlanItem implements AbstractRowItem
 		
 		// Generate a date range between now and 30 days
 		Random rand = new Random();
-		Calendar calendar = Calendar.getInstance();
-		calendar.add(Calendar.DATE, -rand.nextInt(30));
-		Date planStart = calendar.getTime();
-		calendar.add(Calendar.DATE, rand.nextInt(30));
-		Date planEnd = calendar.getTime();
+		Calendar start = Calendar.getInstance();
+		Calendar end = Calendar.getInstance();
+		int r1 = -rand.nextInt(12);
+		int r2 = rand.nextInt(12);
+		start.add(Calendar.DATE, r1);
+		end.add(Calendar.DATE, r2);
 		
 		return new EmployeePlanItem(firstNameSamples[rand.nextInt(firstNameSamples.length)] + " " +
 				lastNameSamples[rand.nextInt(lastNameSamples.length)],
 				projectNames[rand.nextInt(projectNames.length)],
-				planStart,
-				planEnd);
+				start.getTime(),
+				end.getTime());
 	}
 	
 	@Override
