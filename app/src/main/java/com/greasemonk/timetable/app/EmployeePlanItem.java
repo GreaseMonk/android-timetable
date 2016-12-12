@@ -1,6 +1,6 @@
 package com.greasemonk.timetable.app;
 
-import com.greasemonk.timetable.AbstractRowItem;
+import com.greasemonk.timetable.IGridItem;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -13,9 +13,9 @@ import java.util.Random;
  * EmployeePlanItem
  * sample class which is a substitute for your class.
  */
-public class EmployeePlanItem implements AbstractRowItem
+public class EmployeePlanItem implements IGridItem
 {
-	
+	int row, column;
 	private String employeeName, projectName;
 	private Date planStart, planEnd;
 	
@@ -52,26 +52,26 @@ public class EmployeePlanItem implements AbstractRowItem
 	}
 	
 	@Override
-	public Date getPlanningStart()
+	public Date getStartDate()
 	{
 		return planStart;
 	}
 	
 	@Override
-	public Date getPlanningEnd()
+	public Date getEndDate()
 	{
 		return planEnd;
 	}
 	
 	@Override
-	public String getEmployeeName()
+	public String getName()
 	{
-		return employeeName;
+		return projectName;
 	}
 	
 	@Override
-	public String getProjectName()
+	public String getPersonName()
 	{
-		return projectName;
+		return employeeName;
 	}
 }

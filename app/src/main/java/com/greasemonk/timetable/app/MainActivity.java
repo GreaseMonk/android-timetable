@@ -3,6 +3,8 @@ package com.greasemonk.timetable.app;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import com.greasemonk.timetable.TimeTable;
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeConstants;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +21,11 @@ public class MainActivity extends AppCompatActivity
 		setContentView(R.layout.activity_main);
 		
 		timeTable = (TimeTable) findViewById(R.id.time_table);
-		timeTable.update(generateSamplePlanData());
+		
+		//List<EmployeePlanItem> items = new ArrayList<>();
+		//items.add(new EmployeePlanItem("test", "test", start.toDate(), end.toDate()));
+		
+		timeTable.update(generateSamplePlanData()); //generateSamplePlanData()
 	}
 	
 	private static List<EmployeePlanItem> generateSamplePlanData()
