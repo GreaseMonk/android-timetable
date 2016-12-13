@@ -15,7 +15,6 @@ import java.util.Random;
  */
 public class EmployeePlanItem implements IGridItem
 {
-	int row, column;
 	private String employeeName, projectName;
 	private Date planStart, planEnd;
 	
