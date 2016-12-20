@@ -44,8 +44,8 @@ android {
 
 dependencies {
     compile project(':android-timetable-core')
-    compile "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}" 
-    compile "com.android.support:recyclerview-v7:${rootProject.ext.supportLibVersion}" 
+    compile "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
+    compile "com.android.support:recyclerview-v7:${rootProject.ext.supportLibVersion}"
     compile "com.android.support:support-annotations:${rootProject.ext.supportLibVersion}"
     // Used to display items in a recyclerview
     // https://github.com/mikepenz/FastAdapter

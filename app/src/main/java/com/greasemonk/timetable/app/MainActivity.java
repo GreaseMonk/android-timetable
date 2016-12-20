@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity
 		setContentView(R.layout.activity_main);
 		
 		timeTable = (TimeTable) findViewById(R.id.time_table);
-		timeTable.update(generateSamplePlanData());
+		timeTable.setItems(generateSamplePlanData());
 	}
 	
 	private static List<EmployeePlanItem> generateSamplePlanData()

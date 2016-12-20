@@ -1,6 +1,8 @@
 package com.greasemonk.timetable.app;
 
+import android.support.annotation.Nullable;
 import com.greasemonk.timetable.IGridItem;
+import com.greasemonk.timetable.TimeRange;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -16,7 +18,7 @@ import java.util.Random;
 public class EmployeePlanItem implements IGridItem
 {
 	private String employeeName, projectName;
-	private Date planStart, planEnd;
+	private TimeRange timeRange;
 	
 	public EmployeePlanItem() {}
 	
@@ -24,8 +26,7 @@ public class EmployeePlanItem implements IGridItem
 	{
 		this.employeeName = employeeName;
 		this.projectName = projectName;
-		this.planStart = planStart;
-		this.planEnd = planEnd;
+		this.timeRange = new TimeRange(planStart, planEnd);
 	}
 	
 	public static EmployeePlanItem generateSample()
@@ -50,16 +51,11 @@ public class EmployeePlanItem implements IGridItem
 				end.getTime());
 	}
 	
+	@Nullable
 	@Override
-	public Date getStartDate()
+	public TimeRange getTimeRange()
 	{
-		return planStart;
-	}
-	
-	@Override
-	public Date getEndDate()
-	{
-		return planEnd;
+		return timeRange;
 	}
 	
 	@Override

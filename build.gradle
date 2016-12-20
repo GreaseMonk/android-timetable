@@ -17,8 +17,9 @@ buildscript {
 // project and then reference this from the modules
 ext {
     compileSdkVersion = 25
-    buildToolsVersion = "25.0.1"
-    supportLibVersion = "25.0.1"
+    buildToolsVersion = "25.0.2"
+    supportLibVersion = "25.1.0"
+    playServicesVersion = "10.0.0"
 }
 
 allprojects {
@@ -27,12 +28,13 @@ allprojects {
         jcenter()
         maven { url "https://jitpack.io" }
     }
+
+    task clean(type: Delete) {
+        delete rootProject.buildDir
+    }
+
+    task wrapper(type: Wrapper) {
+        gradleVersion = '2.14.1'
+    }
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '2.14.1'
-}
