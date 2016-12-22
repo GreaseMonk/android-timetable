@@ -1,6 +1,11 @@
 package com.greasemonk.timetable.app;
 
+import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.Nullable;
+import android.view.View;
+import android.widget.Toast;
+import com.greasemonk.timetable.AbstractGridItem;
 import com.greasemonk.timetable.IGridItem;
 import com.greasemonk.timetable.TimeRange;
 
@@ -15,21 +20,23 @@ import java.util.Random;
  * EmployeePlanItem
  * sample class which is a substitute for your class.
  */
-public class EmployeePlanItem implements IGridItem
+public class EmployeePlanItem extends AbstractGridItem
 {
 	private String employeeName, projectName;
+	private String planName = "-";
 	private TimeRange timeRange;
+	private Context context;
 	
 	public EmployeePlanItem() {}
 	
-	public EmployeePlanItem(String employeeName, String projectName, Date planStart, Date planEnd)
+	public EmployeePlanItem(Context context, String employeeName, String projectName, Date planStart, Date planEnd)
 	{
 		this.employeeName = employeeName;
 		this.projectName = projectName;
 		this.timeRange = new TimeRange(planStart, planEnd);
 	}
 	
-	public static EmployeePlanItem generateSample()
+	public static EmployeePlanItem generateSample(Context context)
 	{
 		final String[] firstNameSamples = {"Kristeen", "Carran", "Lillie", "Marje", "Edith", "Steve", "Henry", "Kyle", "Terrence"};
 		final String[] lastNameSamples = {"Woodham", "Boatwright", "Lovel", "Dennel", "Wilkerson", "Irvin", "Aston", "Presley"};
@@ -44,7 +51,7 @@ public class EmployeePlanItem implements IGridItem
 		start.add(Calendar.DATE, r1);
 		end.add(Calendar.DATE, r2);
 		
-		return new EmployeePlanItem(firstNameSamples[rand.nextInt(firstNameSamples.length)] + " " +
+		return new EmployeePlanItem(context, firstNameSamples[rand.nextInt(firstNameSamples.length)] + " " +
 				lastNameSamples[rand.nextInt(lastNameSamples.length)],
 				projectNames[rand.nextInt(projectNames.length)],
 				start.getTime(),
@@ -61,6 +68,12 @@ public class EmployeePlanItem implements IGridItem
 	@Override
 	public String getName()
 	{
+		return planName;
+	}
+	
+	@Override
+	public String getSecondaryName()
+	{
 		return projectName;
 	}
 	
@@ -68,5 +81,24 @@ public class EmployeePlanItem implements IGridItem
 	public String getPersonName()
 	{
 		return employeeName;
+	}
+	
+	
+	/**
+	 * OPTIONAL 
+	 * 
+	 * @return a random color for demo purposes.
+	 */
+	@Override
+	public int getItemColor()
+	{
+		return Color.argb(48, 0,0,255);
+	}
+	
+	@Override
+	public void onClick(View view)
+	{
+		// Do something here!
+		Toast.makeText(context, "Plan name: " + planName + "\n" + "Project name: " + projectName, Toast.LENGTH_LONG).show();
 	}
 }

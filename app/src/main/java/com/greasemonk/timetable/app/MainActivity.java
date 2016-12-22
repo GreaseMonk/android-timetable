@@ -1,5 +1,6 @@
 package com.greasemonk.timetable.app;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import com.greasemonk.timetable.TimeTable;
@@ -21,14 +22,14 @@ public class MainActivity extends AppCompatActivity
 		setContentView(R.layout.activity_main);
 		
 		timeTable = (TimeTable) findViewById(R.id.time_table);
-		timeTable.setItems(generateSamplePlanData());
+		timeTable.setItems(generateSamplePlanData(this));
 	}
 	
-	private static List<EmployeePlanItem> generateSamplePlanData()
+	private static List<EmployeePlanItem> generateSamplePlanData(Context context)
 	{
 		List<EmployeePlanItem> planItems = new ArrayList<>();
 		for(int i = 0; i < GENERATED_AMOUNT; i++)
-			planItems.add(EmployeePlanItem.generateSample());
+			planItems.add(EmployeePlanItem.generateSample(context));
 		
 		return planItems;
 	}
