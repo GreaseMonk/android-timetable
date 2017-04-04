@@ -6,7 +6,6 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Toast;
 import com.greasemonk.timetable.AbstractGridItem;
-import com.greasemonk.timetable.IGridItem;
 import com.greasemonk.timetable.TimeRange;
 
 import java.util.Calendar;
@@ -69,12 +68,6 @@ public class EmployeePlanItem extends AbstractGridItem
 	public String getName()
 	{
 		return planName;
-	}
-	
-	@Override
-	public String getSecondaryName()
-	{
-		return projectName;
 	}
 	
 	@Override

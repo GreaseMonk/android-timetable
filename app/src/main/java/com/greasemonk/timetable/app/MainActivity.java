@@ -4,8 +4,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import com.greasemonk.timetable.TimeTable;
-import org.joda.time.DateTime;
-import org.joda.time.DateTimeConstants;
 
 import java.util.ArrayList;
 import java.util.List;
