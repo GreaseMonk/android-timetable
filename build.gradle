@@ -18,8 +18,8 @@ buildscript {
 ext {
     compileSdkVersion = 25
     buildToolsVersion = "25.0.2"
-    supportLibVersion = "25.1.0"
-    playServicesVersion = "10.0.0"
+    supportLibVersion = "25.3.0"
+    playServicesVersion = "10.2.1"
 }
 
 allprojects {

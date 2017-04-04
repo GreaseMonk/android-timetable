@@ -8,8 +8,8 @@ android {
         applicationId "com.greasemonk.timetable.app"
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 101
-        versionName "1.0.1"
+        versionCode 110
+        versionName "1.1.0"
 
         applicationVariants.all { variant ->
             variant.outputs.each { output ->
