@@ -6,8 +6,8 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
+        classpath 'com.android.tools.build:gradle:3.0.0'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -16,10 +16,10 @@ buildscript {
 // To avoid manually setting the same values in all Android modules, set the value on the root
 // project and then reference this from the modules
 ext {
-    compileSdkVersion = 25
-    buildToolsVersion = "25.0.2"
-    supportLibVersion = "25.3.0"
-    playServicesVersion = "10.2.1"
+    compileSdkVersion = 26
+    buildToolsVersion = "27.0.0"
+    supportLibVersion = "27.0.0"
+    playServicesVersion = "11.4.2"
 }
 
 allprojects {
@@ -27,6 +27,7 @@ allprojects {
         mavenCentral()
         jcenter()
         maven { url "https://jitpack.io" }
+        google()
     }
 
     task wrapper(type: Wrapper) {
