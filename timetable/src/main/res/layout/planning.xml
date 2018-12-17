@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2018 .
+  ~ This file is released under the Apache-2.0 license and part of the TimeTable repository located at:
+  ~ https://github.com/greasemonk/android-timetable-core
+  ~ See the "LICENSE" file at the root of the repository or go to the address below for the full license details.
+  ~ https://github.com/GreaseMonk/android-timetable-core/blob/develop/LICENSE
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ProgressBar android:id="@+id/progress_bar"
+                 android:indeterminate="true"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 style="?android:attr/progressBarStyle"
+                 android:layout_centerInParent="true"/>
+
+    <androidx.viewpager.widget.ViewPager android:layout_width="match_parent"
+                                         android:layout_height="match_parent"
+                                         android:id="@+id/view_pager"/>
+
+
+</RelativeLayout>

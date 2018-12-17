@@ -39,3 +39,4 @@ proguard/
 /app/release
 fastlane/installer/
 app/preprocessed
+.idea/

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2018 .
+  ~ This file is released under the Apache-2.0 license and part of the TimeTable repository located at:
+  ~ https://github.com/greasemonk/android-timetable-core
+  ~ See the "LICENSE" file at the root of the repository or go to the address below for the full license details.
+  ~ https://github.com/GreaseMonk/android-timetable-core/blob/develop/LICENSE
+  -->
+
+<resources>
+    <declare-styleable name="TimeTable">
+        <attr name="calTitlesColor" format="color"/>
+        <attr name="calNowTitlesColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="SpannableBar">
+        <attr name="barText" format="string"/>
+        <attr name="barColor" format="color"/>
+        <attr name="barTextColor" format="color"/>
+        <attr name="barTextSize" format="dimension"/>
+        <attr name="barStart" format="integer"/>
+        <attr name="barSpan" format="integer"/>
+        <attr name="barColumns" format="integer"/>
+    </declare-styleable>
+</resources>

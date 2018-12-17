@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2018 .
+  ~ This file is released under the Apache-2.0 license and part of the TimeTable repository located at:
+  ~ https://github.com/greasemonk/android-timetable-core
+  ~ See the "LICENSE" file at the root of the repository or go to the address below for the full license details.
+  ~ https://github.com/GreaseMonk/android-timetable-core/blob/develop/LICENSE
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+android:padding="16dp">
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+
+
+
+        <androidx.appcompat.widget.AppCompatButton android:layout_width="48dp"
+                                                   android:layout_height="match_parent"
+                                                   android:layout_marginStart="4dp"
+                                                   android:id="@+id/row_height_add_btn"
+                                                   android:text="+"
+                                                   style="?attr/borderlessButtonStyle"
+                                                   android:background="#ededed"
+                                                   android:gravity="center"
+                                                   android:textSize="12pt"
+                                                   android:layout_alignParentEnd="true"/>
+
+        <androidx.appcompat.widget.AppCompatButton android:layout_width="48dp"
+                                                   android:layout_height="match_parent"
+                                                   android:layout_toStartOf="@+id/row_height_add_btn"
+                                                   android:id="@+id/row_height_substract_btn"
+                                                   android:text="-"
+                                                   style="?attr/borderlessButtonStyle"
+                                                   android:background="#ededed"
+                                                   android:gravity="center"
+                                                   android:textSize="12pt"/>
+
+        <TextView android:layout_width="48dp"
+                  android:layout_height="match_parent"
+                  android:layout_marginStart="4dp"
+                  android:layout_marginEnd="4dp"
+                  android:layout_toStartOf="@id/row_height_substract_btn"
+                  android:id="@+id/row_height_value"
+                  android:gravity="center"
+                  android:textStyle="bold"
+                  android:textSize="8pt"
+                  android:text="1.0x"/>
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:layout_alignParentStart="true"
+                  android:layout_toStartOf="@+id/row_height_value"
+                  android:gravity="center_vertical"
+                  android:id="@+id/row_height_text"
+                  android:text="Row height"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

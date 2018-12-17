@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2018 .
+  ~ This file is released under the Apache-2.0 license and part of the TimeTable repository located at:
+  ~ https://github.com/greasemonk/android-timetable-core
+  ~ See the "LICENSE" file at the root of the repository or go to the address below for the full license details.
+  ~ https://github.com/GreaseMonk/android-timetable-core/blob/develop/LICENSE
+  -->
+
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
 </resources>

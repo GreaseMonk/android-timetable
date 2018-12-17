@@ -1,54 +1,45 @@
+/*
+ * Copyright (c) 2018 .
+ * This file is released under the Apache-2.0 license and part of the TimeTable repository located at:
+ * https://github.com/greasemonk/android-timetable-core
+ * See the "LICENSE" file at the root of the repository or go to the address below for the full license details.
+ * https://github.com/GreaseMonk/android-timetable-core/blob/develop/LICENSE
+ */
+
 apply plugin: 'com.android.application'
 
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
-
+    compileSdkVersion 28
     defaultConfig {
-        applicationId "com.greasemonk.timetable.app"
+        applicationId "nl.greasemonk.timetable.app"
         minSdkVersion 16
-        targetSdkVersion 27
-        versionCode 110
-        versionName "1.1.0"
-
-        applicationVariants.all { variant ->
-            variant.outputs.all { output ->
-                outputFileName = "${variant.name}-v${variant.versionName}-c${variant.versionCode}.apk"
-            }
-        }
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
-        debug {
-            versionNameSuffix "-DEBUG"
-            try {
-                signingConfig signingConfigs.debug
-            } catch (ex) {
-            }
-            minifyEnabled false
-        }
         release {
-            try {
-                signingConfig signingConfigs.release
-            } catch (ex) {
-            }
-            zipAlignEnabled true
             minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-    }
-    lintOptions {
-        abortOnError false
     }
 }
 
 dependencies {
-    compile project(':android-timetable-core')
-    compile "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
-    compile "com.android.support:recyclerview-v7:${rootProject.ext.supportLibVersion}"
-    compile "com.android.support:support-annotations:${rootProject.ext.supportLibVersion}"
-    // Used to display items in a recyclerview
-    // https://github.com/mikepenz/FastAdapter
-    //compile('com.mikepenz:fastadapter:2.0.0@aar') { transitive = true }
-    // Used to display images
-    // https://github.com/bumptech/glide
-    //compile 'com.github.bumptech.glide:glide:3.7.0'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha01'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha2'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-alpha01'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
+
+    implementation project(path: ':timetable')
 }

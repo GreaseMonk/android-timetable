@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2018 .
+  ~ This file is released under the Apache-2.0 license and part of the TimeTable repository located at:
+  ~ https://github.com/greasemonk/android-timetable-core
+  ~ See the "LICENSE" file at the root of the repository or go to the address below for the full license details.
+  ~ https://github.com/GreaseMonk/android-timetable-core/blob/develop/LICENSE
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <TextView android:id="@+id/title"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:text="OCTOBER - NOVEMBER 2018"
+              android:textAllCaps="true"/>
+
+    <LinearLayout android:id="@+id/group1"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/title">
+
+        <RelativeLayout android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="2">
+
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_alignParentTop="true"
+                      android:id="@+id/week_number"
+                      android:textSize="18pt"
+                      android:text="47"
+                      android:textColor="@android:color/darker_gray"
+                      android:gravity="center"
+                      android:textStyle="bold"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8">
+
+
+            <LinearLayout android:layout_height="wrap_content"
+                          android:layout_width="match_parent"
+                          android:id="@+id/group2"
+                          android:orientation="horizontal"
+                          android:weightSum="7">
+
+                <TextView android:text="31"
+                          android:id="@+id/text1"
+                          style="@style/TextAppearance.AppCompat.Title"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"/>
+                <TextView android:text="32"
+                          android:id="@+id/text2"
+                          style="@style/TextAppearance.AppCompat.Title"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"/>
+                <TextView android:text="33"
+                          android:id="@+id/text3"
+                          style="@style/TextAppearance.AppCompat.Title"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"/>
+                <TextView android:text="34"
+                          android:id="@+id/text4"
+                          style="@style/TextAppearance.AppCompat.Title"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"/>
+                <TextView android:text="35"
+                          android:id="@+id/text5"
+                          style="@style/TextAppearance.AppCompat.Title"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"/>
+                <TextView android:text="36"
+                          android:id="@+id/text6"
+                          style="@style/TextAppearance.AppCompat.Title"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"/>
+                <TextView android:text="37"
+                          android:id="@+id/text7"
+                          style="@style/TextAppearance.AppCompat.Title"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_height="wrap_content"
+                          android:layout_width="match_parent"
+                          android:layout_below="@+id/group2"
+                          android:orientation="horizontal"
+                          android:weightSum="7">
+
+                <TextView android:text="Mon"
+                          android:id="@+id/text8"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"/>
+                <TextView android:text="Tue"
+                          android:id="@+id/text9"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"/>
+                <TextView android:text="Wed"
+                          android:id="@+id/text10"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"/>
+                <TextView android:text="Thu"
+                          android:id="@+id/text11"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"/>
+                <TextView android:text="Fri"
+                          android:id="@+id/text12"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"/>
+                <TextView android:text="Sat"
+                          android:id="@+id/text13"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"/>
+                <TextView android:text="Sun"
+                          android:id="@+id/text14"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <View style="@style/divider" android:layout_below="@id/group1"/>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/group1"
+                  android:id="@+id/group3"
+                  android:weightSum="10">
+
+        <View android:layout_width="0dp"
+              android:layout_height="0dp"
+              android:layout_weight="2"/>
+
+        <nl.greasemonk.timetable.EventPlanView android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:id="@+id/event_view"
+                                                    android:layout_weight="8"/>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_below="@+id/group3"
+                                            tools:listitem="@layout/planning_chapter">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<!--
+  ~ Copyright (c) 2018 .
+  ~ This file is released under the Apache-2.0 license and part of the TimeTable repository located at:
+  ~ https://github.com/greasemonk/android-timetable-core
+  ~ See the "LICENSE" file at the root of the repository or go to the address below for the full license details.
+  ~ https://github.com/GreaseMonk/android-timetable-core/blob/develop/LICENSE
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="8dp"
+        android:height="24dp"
+        android:viewportWidth="24.0"
+        android:viewportHeight="24.0">
+    <group android:scaleY="1"
+           android:scaleX="-1"
+           android:translateX="24">
+        <path
+                android:pathData="M0,12l0,12 11.5,-5.7c6.3,-3.2 11.5,-6 11.5,-6.3 0,-0.3 -5.2,-3.1 -11.5,-6.3l-11.5,-5.7 0,12z"
+                android:fillColor="#ffffff"/>
+    </group>
+</vector>
