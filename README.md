@@ -3,8 +3,9 @@ android-timetable
 ===================
 
 A timetable designed for planning employees to projects.
-  
-[Screenshot](https://github.com/GreaseMonk/android-timetable/blob/develop/screenshots/device-2018-12-18-000422.png) 
+
+<p align="center">
+<img src="https://github.com/GreaseMonk/android-timetable/blob/develop/screenshots/device-2018-12-18-000422.png" height="500"></p>
 
 
 # How to contribute
