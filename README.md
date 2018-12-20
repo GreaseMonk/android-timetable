@@ -25,9 +25,10 @@ Dependency deployment will become available soon.
 ### 1. Include the layout in your XML
 
 ```xml
-<com.greasemonk.timetable.TimeTable android:id="@+id/time_table"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"/>
+<nl.greasemonk.timetable.EmployeePlanning
+        android:id="@+id/plan_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 ```
 
 
