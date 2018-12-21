@@ -9,9 +9,11 @@ A timetable designed for planning employees to projects.
 
 # Features
 - Thin bars on top ('Events')
+- Weekly view (more on roadmap incoming)
 - Two drawing styles, Default and Diagonal lines
 - Colored bars
 - You don't need to create duplicate PlanItem objects. Just return the subjects in the planitem for whom or what they are for.
+- Red 'Today' line
 
 # Concept
 All items have a 'TimeRange' which are easily instantiated with TimeRange(from, to) and an optional 'recurrence' variable. If an item is recurring (daily, weekly, monthly, yearly, etc.) you will be able to specify that in this time range if it is supported. (Keep in mind this is a feature still in progress on the roadmap!)
@@ -48,6 +50,8 @@ Q1 2019
 - More (working) recurring TimeRange options: Hourly, Daily, Weekly, Monthly, Yearly
 - Better text rendering for subjects and planitems
 - Dynamic loading delegate for the implementation of http paging
+- Month view
+- 'Agenda' view (day view)
 
 Q2 2019
 - Custom TimeRange option so you or your user can specify your own
