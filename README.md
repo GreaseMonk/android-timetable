@@ -43,6 +43,15 @@ val vacation = PlanItem("Vacation to Italy",
             		Style.DEFAULT)
 ```
 
+# Roadmap
+Q1 2019
+- More (working) recurring TimeRange options: Hourly, Daily, Weekly, Monthly, Yearly
+- Better text rendering for subjects and planitems
+- Dynamic loading delegate for the implementation of http paging
+
+Q2 2019
+- Custom TimeRange option so you or your user can specify your own
+- More styles for your planitems
 
 # How to contribute
 - Fork the repository
