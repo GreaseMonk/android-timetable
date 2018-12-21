@@ -7,6 +7,42 @@ A timetable designed for planning employees to projects.
 <p align="center">
 <img src="https://github.com/GreaseMonk/android-timetable/blob/develop/screenshots/device-2018-12-18-000422.png" height="500"></p>
 
+# Features
+- Thin bars on top ('Events')
+- Two drawing styles, Default and Diagonal lines
+- Colored bars
+- You don't need to create duplicate PlanItem objects. Just return the subjects in the planitem for whom or what they are for.
+
+# Concept
+All items have a 'TimeRange' which are easily instantiated with TimeRange(from, to) and an optional 'recurrence' variable. If an item is recurring (daily, weekly, monthly, yearly, etc.) you will be able to specify that in this time range if it is supported. (Keep in mind this is a feature still in progress on the roadmap!)
+
+Items with the same start and end timestamp count as 00:00 to 23:59.
+Items with end date before start date are ignored and thus not displayed.
+
+The PlanItem class or the IPlanItem interface are meant for regular planitems. Specify a name, optional color, style (default or diagonal lines), and subjects. 
+
+About the 'List<IPlanSubject<*>>', it's nothing scary. At all. In fact, let me demo how you create a planitem which just the objects supplied from the library. Remember, you don't need to implement the interface on your objects, you can instantiate them the following way:
+
+```kotlin
+// We're going to make a plan item for thomas and federica going on vacation.
+// The identifier and name are the same for demo purposes.
+// The identifier must implement Comparable - Integer, String, etc.
+val thomas = PlanItemSubject("Thomas Schultz", "Thomas Schultz")
+val federica = PlanItemSubject("Federica Carraro", "Federica Carraro")
+
+// Let's create a vacation from today, lasting 23 days
+val cal = Calendar.getInstance()
+val startMillis = cal.timeInMillis
+cal.add(Calendar.DAY_OF_YEAR, 23)
+val endMillis = cal.timeInMillis
+
+val vacation = PlanItem("Vacation to Italy",
+            		TimeRange(startMillis, endMillis), 
+            		listOf(thomas, federica), 
+            		Color.GREEN, 
+            		Style.DEFAULT)
+```
+
 
 # How to contribute
 - Fork the repository
