@@ -52,6 +52,7 @@ Q1 2019
 - Dynamic loading delegate for the implementation of http paging
 - Month view
 - 'Agenda' view (day view)
+- Exact start and end time for planitems (optional)
 
 Q2 2019
 - Custom TimeRange option so you or your user can specify your own
