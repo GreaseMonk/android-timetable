@@ -15,6 +15,13 @@ A timetable designed for planning employees to projects.
 - You don't need to create duplicate PlanItem objects. Just return the subjects in the planitem for whom or what they are for.
 - Red 'Today' line
 
+# End of June update
+- Pagination (you can set a http get call in a closure to return data per week)
+- Hourly 'Agenda' feature (this will be a different fragment)
+- Code improvements and additional features such as a long click listener
+- Visual enhancements
+- maven central (so the library can be easily included into your project)
+
 # Concept
 All items have a 'TimeRange' which are easily instantiated with TimeRange(from, to) and an optional 'recurrence' variable. If an item is recurring (daily, weekly, monthly, yearly, etc.) you will be able to specify that in this time range if it is supported. (Keep in mind this is a feature still in progress on the roadmap!)
 
